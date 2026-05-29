@@ -1,0 +1,48 @@
+[project]
+name = "disperse"
+version = "0.2.0"
+description = "Solving the dispersion relation of collective neutrino oscillations."
+readme = "README.md"
+authors = [
+    { name = "schrodingers-turtle", email = "anson@unm.edu" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mpmath>=0.19",
+    "netcdf4>=1.6",
+    "netcdf4>=1.6.5 ; python_full_version >= '3.11'",
+    "netcdf4>=1.7.2 ; python_full_version >= '3.13'",
+    "numpy>=1.23",
+    "numpy>=1.25 ; python_full_version >= '3.11'",
+    "numpy>=1.26 ; python_full_version >= '3.12'",
+    "numpy>=2.1 ; python_full_version >= '3.13'",
+    "python-flint>=0.4",
+    "python-flint>=0.5 ; python_full_version >= '3.12'",
+    "python-flint>=0.7 ; python_full_version >= '3.13'",
+    "scipy>=1.10 ; python_full_version >= '3.11'",
+    "scipy>=1.12 ; python_full_version >= '3.12'",
+    "scipy>=1.15 ; python_full_version >= '3.13'",
+    "scipy>=1.8",
+    "sympy>=1.12",
+    "xarray>=0.20",
+    "xarray>=2022.9 ; python_full_version >= '3.12'",
+    "xarray>=2023.9 ; python_full_version >= '3.13'",
+]
+
+[project.scripts]
+disperse = "disperse:main"
+
+[build-system]
+requires = ["uv_build>=0.11.11,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "marimo>=0.23.8",
+    "matplotlib>=3.10.9",
+    "mkdocstrings-python>=2.0.3",
+    "pytest>=9.0.3",
+    "ruff>=0.15.12",
+    "ty>=0.0.34",
+    "zensical>=0.0.43",
+]
